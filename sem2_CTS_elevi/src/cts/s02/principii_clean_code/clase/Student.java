@@ -21,7 +21,7 @@ public class Student extends Aplicant {
 	}
 
 
-	public Student() {
+	public Student(String nume, String prenume, int varsta, int punctaj) {
 		super();
 		
 	}
