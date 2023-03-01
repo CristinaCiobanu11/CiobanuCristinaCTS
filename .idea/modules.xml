@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sem2_CTS/sem2_CTS.iml" filepath="$PROJECT_DIR$/sem2_CTS/sem2_CTS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sem2_CTS_elevi/sem2_CTS_elevi.iml" filepath="$PROJECT_DIR$/sem2_CTS_elevi/sem2_CTS_elevi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seminariiCTS.iml" filepath="$PROJECT_DIR$/seminariiCTS.iml" />
+    </modules>
+  </component>
+</project>
