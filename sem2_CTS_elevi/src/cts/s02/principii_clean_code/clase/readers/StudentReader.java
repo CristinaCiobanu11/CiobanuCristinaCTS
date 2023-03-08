@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class StudentReader implements AplicantReader{
+public class StudentReader extends AplicantReader {
     @Override
     public List<Aplicant> readAplicant(String fileName) throws FileNotFoundException {
         Scanner input2 = new Scanner(new File(fileName));
@@ -18,18 +18,13 @@ public class StudentReader implements AplicantReader{
         List<Aplicant> studenti = new ArrayList<Aplicant>();
 
         while (input2.hasNext()) {
-            String nume = input2.next();
-            String prenume = input2.next();
-            int varsta = input2.nextInt();
-            int punctaj = input2.nextInt();
-            int nr = input2.nextInt();
-            String[] vect = new String[5];
-            for (int i = 0; i < nr; i++)
-                vect[i] = input2.next();
-            int clasa = input2.nextInt();
-            String tutore = input2.next();
-            Student e = new Student(nume,prenume,varsta,punctaj);
-            studenti.add(e);
+            Student student=new Student();
+            super.readApplicant(input2,student);
+            int an = input2.nextInt();
+            String facultate = input2.next();
+            student.setFacultate(facultate);
+            student.setAn_studii(an);
+            studenti.add(student);
         }
 
         input2.close();

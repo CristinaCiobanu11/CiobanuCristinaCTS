@@ -1,5 +1,7 @@
 package cts.s02.principii_clean_code.clase;
 
+import java.util.Arrays;
+
 public abstract class Aplicant{
 	protected String nume;
 	protected String prenume;
@@ -7,6 +9,7 @@ public abstract class Aplicant{
 	protected int punctaj;
 	protected int nr_proiecte;
 	protected String[] denumireProiect;
+	private static int sumaFinantata;
 	
 	
 	public String getNume() {
@@ -59,8 +62,30 @@ public abstract class Aplicant{
 	public int getNr_proiecte() {
 		return nr_proiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte) {
+	public void setNr_proiecte(int nr_proiecte, String[] denumireProiect) {
+
 		this.nr_proiecte = nr_proiecte;
+		this.denumireProiect=new String[this.nr_proiecte];
+		for(int i=0;i<this.nr_proiecte;i++){
+			this.denumireProiect[i]=denumireProiect[i];
+		}
 	}
 
+	@Override
+	public String toString() {
+		final StringBuffer sb = new StringBuffer();
+		sb.append("nume='").append(nume).append('\'');
+		sb.append(", prenume='").append(prenume).append('\'');
+		sb.append(", varsta=").append(varsta);
+		sb.append(", punctaj=").append(punctaj);
+		sb.append(", nr_proiecte=").append(nr_proiecte);
+		sb.append(", denumireProiect=").append(denumireProiect == null ? "null" : Arrays.asList(denumireProiect).toString());
+		return sb.toString();
+	}
+
+
+	public abstract void afisareFinantare();//
+	public void afisareFinantare(String tipAplicant, int suma) {
+		System.out.println(tipAplicant +this.nume+" "+this.prenume+" primeste"+sumaFinantata+" Euro/zi in proiect.");
+	}
 }

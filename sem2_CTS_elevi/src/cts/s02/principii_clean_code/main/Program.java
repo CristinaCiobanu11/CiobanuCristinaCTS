@@ -16,8 +16,10 @@ public class Program {
 		try {
 			AplicantReader aplicantReadable = new AngajatReader();
 			listaAngajati = aplicantReadable.readAplicant("angajati.txt");
-			for (Aplicant angajat : listaAngajati)
+			for (Aplicant angajat : listaAngajati){
 				System.out.println(angajat.toString());
+				angajat.afisareFinantare();}
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
