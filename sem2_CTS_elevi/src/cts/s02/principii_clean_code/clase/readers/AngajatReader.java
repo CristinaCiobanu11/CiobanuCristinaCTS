@@ -12,14 +12,14 @@ import java.util.Scanner;
 public class AngajatReader extends AplicantReader {
 
     @Override
-    public List<Aplicant> readAplicant(String fileName) throws FileNotFoundException {
+    public List<Aplicant> citesteAplicant(String fileName) throws FileNotFoundException {
         Scanner input2 = new Scanner(new File(fileName));
         input2.useDelimiter(",");
         List<Aplicant> angajati = new ArrayList<Aplicant>();
 
         while (input2.hasNext()) {
             Angajat angajat=new Angajat();
-            super.readApplicant(input2,angajat);
+            super.citesteAplicant(input2,angajat);
             int salariu = input2.nextInt();
             String ocupatie = input2.next();
             angajat.setSalariu(salariu);

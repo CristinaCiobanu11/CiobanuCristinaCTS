@@ -15,7 +15,7 @@ public class Program {
 		List<Aplicant> listaAngajati;
 		try {
 			AplicantReader aplicantReadable = new AngajatReader();
-			listaAngajati = aplicantReadable.readAplicant("angajati.txt");
+			listaAngajati = aplicantReadable.citesteAplicant("angajati.txt");
 			for (Aplicant angajat : listaAngajati){
 				System.out.println(angajat.toString());
 				angajat.afisareFinantare();}

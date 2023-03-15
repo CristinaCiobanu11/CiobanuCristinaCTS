@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class AplicantReader {
-    public abstract List<Aplicant> readAplicant(String fileName) throws FileNotFoundException;
+    public abstract List<Aplicant> citesteAplicant(String fileName) throws FileNotFoundException;
 
-    public void readApplicant(Scanner scanner, Aplicant aplicant){
+    public void citesteAplicant(Scanner scanner, Aplicant aplicant){
         String nume = scanner.next();
         String prenume = scanner.next();
         int varsta = scanner.nextInt();
