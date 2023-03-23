@@ -1,6 +1,5 @@
 package factory_method;
 
-import simple_factory.PersonalSpital;
 
 public class Brancardier extends PersonalSpital {
     public Brancardier(String nume){
@@ -9,7 +8,7 @@ public class Brancardier extends PersonalSpital {
 
     @Override
     public void afiseazaDescriere() {
-        System.out.println("Brancardierul "+super.nume);
+        System.out.println("Brancardierul "+super.getNume());
     }
 
 }

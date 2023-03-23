@@ -1,6 +1,5 @@
 package factory_method;
 
-import simple_factory.PersonalSpital;
 
 public class Medic extends PersonalSpital {
     public Medic(String nume){
