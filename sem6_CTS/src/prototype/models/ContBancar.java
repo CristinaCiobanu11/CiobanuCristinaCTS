@@ -3,7 +3,7 @@ package prototype.models;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ContBancar implements IContCloneable{
+public class ContBancar implements IContCloneable {
 
     private String detinator;
     private Map<String, Integer> documente;
@@ -18,14 +18,13 @@ public class ContBancar implements IContCloneable{
             this.detinator = detinator;
             this.documente = documente;
             this.numarFileDosar = numarFileDosar;
-        }
-        else {
+        } else {
             throw new IllegalArgumentException("Numar incorect de file in dosar");
         }
     }
 
-    private ContBancar(){
-        this.documente=null;
+    private ContBancar() {
+        this.documente = null;
     }
 
     @Override
@@ -38,13 +37,13 @@ public class ContBancar implements IContCloneable{
         return sb.toString();
     }
 
-    public IContCloneable cloneaza(){
-        ContBancar contCopie=new ContBancar();
-        contCopie.detinator=this.detinator;
-        contCopie.numarFileDosar=this.numarFileDosar;
+    public IContCloneable cloneaza() {
+        ContBancar contCopie = new ContBancar();
+        contCopie.detinator = this.detinator;
+        contCopie.numarFileDosar = this.numarFileDosar;
 
-        contCopie.documente=new HashMap<>();
-        for(String key:this.documente.keySet()){
+        contCopie.documente = new HashMap<>();
+        for (String key : this.documente.keySet()) {
             contCopie.documente.put(key, this.documente.get(key));
         }
         return contCopie;

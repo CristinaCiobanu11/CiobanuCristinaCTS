@@ -1,11 +1,11 @@
-package builder;
+package builder.models;
 
-public class ContBuilder implements IBuilder{
+public class ContBuilder implements IBuilder {
 
     ContBancar contBancar;
 
     public ContBuilder() {
-        this.contBancar=new ContBancar(false, "Anonim", false, false);
+        this.contBancar = new ContBancar(false, "Anonim", false, false);
     }
 
 
@@ -15,19 +15,16 @@ public class ContBuilder implements IBuilder{
     }
 
 
-
     public ContBuilder setNumeClient(String numeClient) {
         this.contBancar.setNumeClient(numeClient);
         return this;
     }
 
 
-
     public ContBuilder setCardAtasat(boolean cardAtasat) {
         this.contBancar.setCardAtasat(cardAtasat);
         return this;
     }
-
 
 
     public ContBuilder setInternetBanking(boolean internetBanking) {

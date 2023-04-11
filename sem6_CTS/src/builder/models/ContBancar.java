@@ -1,4 +1,4 @@
-package builder;
+package builder.models;
 
 public class ContBancar {
     public boolean primesteSalariu;

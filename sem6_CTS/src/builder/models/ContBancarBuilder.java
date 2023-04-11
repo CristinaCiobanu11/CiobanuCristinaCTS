@@ -1,16 +1,16 @@
-package builder;
+package builder.models;
 
-public class ContBancarBuilder implements IBuilder{
+public class ContBancarBuilder implements IBuilder {
     public boolean primesteSalariu;
     private String numeClient;
     private boolean cardAtasat;
     private boolean internetBanking;
 
-    public ContBancarBuilder(){
-        this.primesteSalariu=false;
-        this.cardAtasat=false;
-        this.internetBanking=false;
-        this.numeClient="Anonim";
+    public ContBancarBuilder() {
+        this.primesteSalariu = false;
+        this.cardAtasat = false;
+        this.internetBanking = false;
+        this.numeClient = "Anonim";
     }
 
     public ContBancarBuilder(boolean primesteSalariu, String numeClient, boolean cardAtasat, boolean internetBanking) {
@@ -40,8 +40,8 @@ public class ContBancarBuilder implements IBuilder{
         return this;
     }
 
-    public ContBancar build(){
-        ContBancar cont=new ContBancar(this.primesteSalariu, this.numeClient, this.cardAtasat, this.internetBanking);
+    public ContBancar build() {
+        ContBancar cont = new ContBancar(this.primesteSalariu, this.numeClient, this.cardAtasat, this.internetBanking);
         return cont;
     }
 }
