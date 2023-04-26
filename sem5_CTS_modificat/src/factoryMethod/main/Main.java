@@ -9,8 +9,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        FactoryMedic factoryMedic=new FactoryMedic();
-        FactoryBrancardier factoryBrancardier=new FactoryBrancardier();
+        FactoryMedic factoryMedic = new FactoryMedic();
+        FactoryBrancardier factoryBrancardier = new FactoryBrancardier();
 
 
         List<PersonalSpital> list = new ArrayList<>();
